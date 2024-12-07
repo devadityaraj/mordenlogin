@@ -1,0 +1,124 @@
+<html>
+<head>
+  <title>Login</title>
+ <style>
+    body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  background: transparent; 
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 10px 20px #0056b3;
+  backdrop-filter: blur(2px);
+}
+
+.headline {
+  font-family: 'Cursive', 'Georgia', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.input {
+    margin-bottom: 20px;
+}
+
+.text {
+    margin-bottom: 15px;
+}
+
+.text input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#reset-password {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007bff;
+}
+
+#reset-password:hover {
+    color: #0056b3;
+}
+
+.button {
+    text-align: center;
+}
+
+.loginbutton {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+}
+
+.loginbutton:hover {
+    background: #0056b3;
+}
+
+
+ </style>
+</head>
+<body>
+  <div class="box">
+    <h1 class="headline">✨Login✨</h1>
+    <form class="login-form">
+        <div class="input">
+            <div class="text">
+                <input type="email" placeholder="Email" id="id">
+            </div>
+
+            <div class="text">
+                <input type="password" placeholder="Password" id="password">
+            </div>
+
+            <p><a href="#" id="reset-password">Forgot Password?</a></p>
+        </div>
+
+        <div class="button">
+            <button type="button" class="loginbutton" onclick="login()">Login</button>
+        </div>
+    </form>
+  </div>
+
+  <script>
+     function login() {
+            const validId = "aditya@4net.in";
+            const validPassword = "developeradi";
+
+            const userId = document.getElementById("id").value;
+            const password = document.getElementById("password").value;
+
+            if (userId === validId && password === validPassword) {
+                window.location.href = "welcome.html";
+            } else {
+                alert("Check User Name and Password!");
+            }
+        }
+  </script>
+</body>
+</html>
